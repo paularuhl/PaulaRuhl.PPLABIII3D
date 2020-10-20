@@ -61,9 +61,10 @@ function actualizarLista() {
 
     divTabla.innerHTML = "";
     let spinner = document.createElement("img");
-    spinner.src = "739.png";
+    spinner.src = "./img/739.gif";
     divTabla.appendChild(spinner);
     setTimeout(() => {
+        divTabla.removeChild(spinner);
         divTabla.appendChild(crearTabla(listaAutomoviles));
     }, 5000);
 }
