@@ -1,5 +1,4 @@
 import crearTabla from "./tabla.js";
-import Anuncio from "./anuncio.js";
 import Anuncio_Auto from "./anuncio_auto.js";
 
 const listaAutomoviles = [];
@@ -54,6 +53,7 @@ function guardarDatos(){
     localStorage.setItem('nextId', proximoId);
 }
 function actualizarLista(){
-  divTabla.appendChild(crearTabla(listaDePersonas));
+    divTabla.innerHTML = "";
+  divTabla.appendChild(crearTabla(listaAutomoviles));
 
 }
