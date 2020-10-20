@@ -7,3 +7,4 @@ export default class Anuncio {
         this.precio = precio;
     }
 }
+
