@@ -34,7 +34,6 @@ function obtenerAutomoviles() {
 
 }
 function obtenerAutomovil() {
-    console.log(document);
     const nuevoAnuncioAuto = new Anuncio_Auto(
         proximoId,
         document.getElementById('txtTitulo').value,

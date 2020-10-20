@@ -20,21 +20,19 @@ thead{
 }
 
 .links {
-    display: flex;
-    justify-content: flex-end;
+    justify-self: flex-end;
     padding: 10px;
   }
 
 ul{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 #setTransaction{
     display: flex;
     justify-content: center;
 }
+
 header, footer{
     background-color:lightblue;
 }
@@ -55,3 +53,14 @@ footer {
  #bottomLinks li {
      padding: 10px;
  }
+
+ .encabezadoAdmin{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+ }
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
