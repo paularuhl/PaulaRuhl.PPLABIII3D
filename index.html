@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/scripts.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Parcial</title>
+</head>
+
+<body>
+    <header>
+        <img src="logo.jpg" alt="logo con estrellitas">
+        <div class="links">
+            <ul>
+                <li href="#aboutUs">Nosotros</li>
+                <li href="#news">Anuncios</li>
+                <li href="#blog">Blog</li>
+                <li href="#contact">Contacto</li>
+            </ul>
+        </div>
+    </header>
+    <section class="container" id="dataIn">
+        <form>
+            <fieldset>
+                <legend> Información del anuncio </legend>
+                <label>
+                    Titulo: <input type="text" name="titulo" id="txtTitulo" required>
+                </label>
+                <br>
+                <br>
+                <fieldset id="setTransaction">
+                    <legend> Transaccion </legend>
+                    <label for="rdoS"><input type="radio" name="transaction" value="sell" id="rdoS" checked>
+                        Venta</label> <br>
+                    <label for="rdoR"><input type="radio" name="transaction" value="rent" id="rdoR"> Alquiler</label>
+                    <br>
+                </fieldset>
+                <br>
+                <br>
+                <label>
+                    Descripcion: <input type="text" name="descripcion" id="txtDescripcion" required>
+                </label>
+                <br>
+                <br>
+                <label>
+                    Precio: <input type="text" name="precio" id="txtPrecio" required>
+                </label>
+                <br>
+                <label> <i class="fa fa-sign-in" aria-hidden="true"></i> * icono puerta*
+                    <input type="text" name="puertas" id="txtPuertas" placeholder="Puertas" required>
+                </label>
+                <label> <i class="fa fa-home"></i>*icono kms*
+                    <input type="text" name="kms" id="txtKMs" placeholder="KMs" required>
+                </label>
+                <label> <i class="fa fa-home"></i>icono potencia*
+                    <input type="text" name="potencia" id="txtPotencia" placeholder="Potencia" required>
+                </label>
+                <br>
+            </fieldset>
+            <button>Guardar</button>
+            <!-- <button>Modificar</button>
+                <button>Eliminar</button> -->
+        </form>
+    </section>
+
+    <!-- <button id="btnTabla">Cargar Tabla</button> -->
+    <section class="container">
+        <div id="divTabla">
+        </div>
+    </section>
+</body>
+
+</html>
