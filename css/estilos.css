@@ -22,16 +22,36 @@ thead{
 .links {
     display: flex;
     justify-content: flex-end;
-
+    padding: 10px;
   }
+
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
-
 }
 
 #setTransaction{
     display: flex;
     justify-content: center;
 }
+header, footer{
+    background-color:lightblue;
+}
+
+footer {
+    width: 100%;
+    position:absolute;
+    bottom:0;
+    background-color:lightblue;
+
+}
+
+#bottomLinks{
+    display: flex;
+    padding: 10px;
+}
+
+ #bottomLinks li {
+     padding: 10px;
+ }
