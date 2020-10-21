@@ -51,8 +51,23 @@ function crearCuerpo(lista) {
 function agregarManejadorTR(tr) {
     if (tr) {
         tr.addEventListener('click', function (e) {
-        alert(e.target.parentNode.dataset.id);
-        });
+            
+            let automoviles = JSON.parse(localStorage.getItem('gente'));
+            console.log(automoviles);
+            let selected;
+            automoviles.forEach(element => {
+                if(tr.getAttribute('data-id') == element.id){
+                    selected = element;
+                }
+            });
+            document.getElementById('txtTitulo').value = element.titulo;
+            frmAutomovil.transaction.value = element.transaccion;
+            document.getElementById('txtDescripcion').value = element.descripcion;
+            document.getElementById('txtPrecio').value = element.precio;
+            document.getElementById('txtPuertas').value = element.num_puertas;
+            document.getElementById('txtKMs').value = element.num_KMs;
+            document.getElementById('txtPotencia').value = element.potencia;
+            });
     }
 
 }

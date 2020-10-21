@@ -46,6 +46,7 @@ footer {
     bottom:0;
     background-color:lightblue;
     text-align: center;
+    position: fixed;
 }
 
 #bottomLinks{
@@ -79,4 +80,5 @@ input{
 
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y : auto;
 }
