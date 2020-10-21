@@ -64,3 +64,12 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
+form{
+    padding: 10px;
+    margin: 10px;
+}
+
+input{
+    padding: 10px;
+}
