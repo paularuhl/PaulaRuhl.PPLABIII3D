@@ -35,6 +35,9 @@ ul{
 
 header, footer{
     background-color:lightblue;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 footer {
@@ -42,7 +45,7 @@ footer {
     position:absolute;
     bottom:0;
     background-color:lightblue;
-
+    text-align: center;
 }
 
 #bottomLinks{
@@ -72,4 +75,8 @@ form{
 
 input{
     padding: 10px;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
