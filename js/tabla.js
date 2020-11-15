@@ -1,6 +1,6 @@
 
 
-export default function crearTabla(lista){
+export default function crearTabla(lista) {
     const tabla = document.createElement('table');
 
     tabla.appendChild(crearCabecera(lista[0]));
@@ -36,11 +36,11 @@ function crearCuerpo(lista) {
             td.appendChild(texto);
             tr.appendChild(td);
         }
-        if(element.hasOwnProperty('id')){
+        if (element.hasOwnProperty('id')) {
             tr.setAttribute('data-id', element['id'])
 
         }
-        agregarManejadorTR(tr); 
+        agregarManejadorTR(tr);
         tbody.appendChild(tr);
     });
 
@@ -51,23 +51,49 @@ function crearCuerpo(lista) {
 function agregarManejadorTR(tr) {
     if (tr) {
         tr.addEventListener('click', function (e) {
-            
-            let automoviles = JSON.parse(localStorage.getItem('gente'));
-            console.log(automoviles);
-            let selected;
-            automoviles.forEach(element => {
-                if(tr.getAttribute('data-id') == element.id){
-                    selected = element;
+            let listaAutomoviles = JSON.parse(localStorage.getItem('anuncios')) || [];
+
+            const id = e.target.parentElement.getAttribute('data-id');
+
+            const titulo = document.getElementById("txtTitulo");
+            const descripcion = document.getElementById("txtDescripcion");
+            const precio = document.getElementById("txtPrecio");
+            const puertas = document.getElementById("txtPuertas");
+            const km = document.getElementById("txtKMs");
+            const potencia = document.getElementById("txtPotencia");
+
+            const $btnGuardar = document.getElementById("btnGuardar");
+            const $btnModificar = document.getElementById("btnModificar");
+            const $btnEliminar = document.getElementById("btnEliminar");
+
+            document.getElementById("txtID").value = id;
+
+            listaAutomoviles.forEach(element => {
+                if (id == element.id) {
+
+                    titulo.value = element.titulo;
+                    descripcion.value = element.descripcion;
+                    precio.value = element.precio;
+                    puertas.value = element.num_puertas;
+                    km.value = element.num_KMs;
+                    potencia.value = element.potencia;
+
+                    if (element.transaccion == "venta") {
+                        document.getElementById("rdoS").checked = true;
+                    } else {
+                        document.getElementById("rdoR").checked = true;
+                    }
+                 
+                    $btnGuardar.disabled = true;
+                    $btnModificar.disabled = false;
+                    $btnEliminar.disabled = false;
+
                 }
             });
-            document.getElementById('txtTitulo').value = element.titulo;
-            frmAutomovil.transaction.value = element.transaccion;
-            document.getElementById('txtDescripcion').value = element.descripcion;
-            document.getElementById('txtPrecio').value = element.precio;
-            document.getElementById('txtPuertas').value = element.num_puertas;
-            document.getElementById('txtKMs').value = element.num_KMs;
-            document.getElementById('txtPotencia').value = element.potencia;
-            });
-    }
 
+
+
+        });
+
+    }
 }
